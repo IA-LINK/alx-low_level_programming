@@ -1,10 +1,12 @@
-#include <main.h>
+#include "main.h"
 
 /**
- * Main - Entry point
- * Return: Always 0
+ * main - function
+ * Return: Always success(0)
  */
+
 int main(void)
+
 {
 	_putchar('_');
 	_putchar('p');
