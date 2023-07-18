@@ -9,8 +9,8 @@
 int add(int, int);
 
 int main() {
-    int num1 = 89;
-    int num2 = 9;
+    int num1 = 10;
+    int num2 = 5;
     int result = add(num1, num2);
     printf("The sum of %d and %d is %d\n", num1, num2, result);
     return 0;
