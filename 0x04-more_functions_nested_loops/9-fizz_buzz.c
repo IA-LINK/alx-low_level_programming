@@ -1,38 +1,31 @@
+#include "main.h"
 #include <stdio.h>
-#include <stdlib.h>
 
 /**
- * fizz_buzz - program to print 1 - 100
- * where number divisible by 3 is fizz
- * where number divisible by 5 is buzz
- * where num divisible by 5 and 3 is fizzbuzz
- * number otherwise
- * Return: void
- */
-void fizz_buzz(void)
-{
-	int num;
-
-	for (num = 1; num <= 100; num++)
-	{
-		if (num % 3 == 0 && num % 5 == 0)
-			printf("FizzBuzz ");
-		else if (num % 5 == 0)
-			printf("Buzz ");
-		else if (num % 3 == 0)
-			printf("Fizz ");
-		else
-			printf("%d ", num);
-	}
-	printf("\n");
-}
-/**
- * main - Entry point
+ * main - take the fizz-buzz challenge
  *
- * Return: 0 always (success)
+ * Return: Always 0
  */
+
 int main(void)
 {
-	fizz_buzz();
+	int n;
+
+	for (n = 1; n < 101; n++)
+	{
+		if (n % 5 == 0 && n % 3 == 0)
+			printf("FizzBuzz ");
+		else if (n % 5 == 0)
+			if (n == 100)
+				printf("Buzz");
+			else
+				printf("Buzz ");
+		else if (n % 3 == 0)
+			printf("Fizz ");
+		else
+			printf("%d ", n);
+	}
+	printf("\n");
+
 	return (0);
 }
