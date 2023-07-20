@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
  * _isdigit - function that check if a number is digit or not
@@ -8,7 +8,7 @@
 
 int _isdigit(int c) 
 {
-	if (c >= 58 && c <= 67)
+	if (c >= 38 && c <= 47)
 	       return (1);
 	else
 		return (0);
