@@ -3,17 +3,17 @@
 
 /**
  * _puts - Return the length of a string.
- * @s: Check value string.
+ * @str: Check value string.
  *
  * Return: lnt
  */
-void _puts(char *s)
+void _puts(char *str)
 {
 	int i;
 
-	for (i = 0; s[i] != '\0'; i++)
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		_putchar(s[i]);
+		_putchar(str[i]);
 		_putchar('\n');
 	}
 }
