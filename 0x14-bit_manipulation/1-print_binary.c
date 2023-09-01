@@ -12,14 +12,14 @@
  */
 void print_binary(unsigned long int n)
 {
-	int j;
-	int bits = sizeof(unsigned long int) * 8;
+	unsigned long int mask;
+	int bit_position = sizeof(unsigned long int) * 8 - 1;
 
-	for (j = bits - 1; j >= 0; j--)
+	while (bit_position >= 0)
 	{
-		unsigned long int mask = 1UL << j;
-
+		mask = 1UL << bit_position;
 		putchar((n & mask) ? '1' : '0');
+		bit_position--;
 	}
 	putchar('\n');
 }
