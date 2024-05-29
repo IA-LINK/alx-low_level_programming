@@ -1,11 +1,15 @@
 CC = gcc
-
 SRC = main.c school.c
 OBJ = $(SRC:.c=.o)
 NAME = school
 RM = rm -f
 
-# make all i.e. makes all files executale
+
+# Rule to compile an object file from a source file
+$(OBJ): $(SRC)
+    $(CC) -c $< -o $@
+
+# Build all files executale files
 all : $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
