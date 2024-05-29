@@ -1,0 +1,24 @@
+CC = gcc
+
+SRC = main.c school.c
+OBJ = $(SRC:.c=.o)
+NAME = school
+RM = rm -f
+
+# make all i.e. makes all files executale
+all : $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+
+# removes executable and Emacs/Vim temporary files
+clean : 
+	$(RM) *~ $(NAME)
+
+# make that's removes only object files
+oclean :
+	$(RM) $(OBJ) 
+
+# removes all executable, object files, and Emacs/Vim temporary files
+fclean : clean oclean
+
+# forces recompilation regardless of timestamps
+reall: clean all
