@@ -4,25 +4,20 @@ OBJ = $(SRC:.c=.o)
 NAME = school
 RM = rm -f
 
-
-# Rule to compile an object file from a source file
-$(OBJ): $(SRC)
-    $(CC) -c $< -o $@
-
-# Build all files executale files
+# make all i.e. makes all files executable
 all : $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
-# removes executable and Emacs/Vim temporary files
-clean : 
+# deletes any temporary files and executable
+clean :
 	$(RM) *~ $(NAME)
 
-# make that's removes only object files
+# deletes object files
 oclean :
-	$(RM) $(OBJ) 
+	$(RM) $(OBJ)
 
-# removes all executable, object files, and Emacs/Vim temporary files
+# delets all (temp files, executables & object files)
 fclean : clean oclean
 
-# forces recompilation regardless of timestamps
-reall: clean all
+# deletes all and recompiles all source files
+re : oclean all
